@@ -1,11 +1,11 @@
 
 
-<div *ngIf="dt | async as d">
+<div *ngIf="{d:dt|async,p:p|async} as data">
   <div class="card">
-    name = {{oa(d).userId}} <br>
-    id = {{oa(d).id}}<br>
-    title = {{oa(d).title}}<br>
-    completed = {{oa(d).completed}}
+    name = {{oa(data.d).userId}} <br>
+    id = {{oa(data.d).id}}<br>
+    title = {{oa(data.d).title}}<br>
+    completed = {{oa(data.d).completed}}
   </div>
 </div>  
 

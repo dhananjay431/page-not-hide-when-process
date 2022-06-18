@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
     $('.loader').last().remove();
   }
 
+  p:any = of([])
   oa(d) {
     return d;
   }
@@ -73,8 +74,9 @@ export class AppComponent implements OnInit {
   }
   change2() {
     let that = this;
-    this.nest().subscribe((x) => {
-      that.name.next(new Date().getTime());
-    });
+    this.p = this.pp(this.nest(),tap(d =>{
+      that.name.next(new Date().getTime()); 
+    }))
+    
   }
 }
