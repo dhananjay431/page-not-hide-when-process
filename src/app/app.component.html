@@ -1,0 +1,13 @@
+
+
+<div *ngIf="dt | async as d">
+  <div class="card">
+    name = {{oa(d).userId}} <br>
+    id = {{oa(d).id}}<br>
+    title = {{oa(d).title}}<br>
+    completed = {{oa(d).completed}}
+  </div>
+</div>  
+
+<button (click)="change()">call</button>
+<button (click)="change2()">call2</button>
